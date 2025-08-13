@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import logo from "../../assets/logo.png";
 import { useDeviceType } from "../../hooks/common/useDeviceType.js";
+import NeuButton from "../buttons/neuButton.jsx";
 
 const Navbar = () => {
   const { isMobile, isTab } = useDeviceType();
@@ -85,12 +86,7 @@ const Navbar = () => {
 
           {/* CTA Button (Desktop only) */}
           {!isMobile && !isTab && (
-            <button className="relative px-6 py-1 bg-green-400/30 dark:bg-green-200/50 text-green-700 dark:text-green-400 rounded-full overflow-hidden group border border-green-400/30 hover:border-green-500 transition-all duration-400">
-              <span className="relative z-10 text-sm uppercase tracking-wider">
-                Book a Meet
-              </span>
-              <div className="absolute inset-0 bg-green-400/50 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-            </button>
+            <NeuButton text="Book a Meet" />
           )}
 
           {/* Mobile Menu Button */}
