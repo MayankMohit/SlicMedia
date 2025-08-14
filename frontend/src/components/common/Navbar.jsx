@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import logo from "../../assets/logo.png";
 import { useDeviceType } from "../../hooks/common/useDeviceType.js";
 import NeuButton from "../buttons/neuButton.jsx";
+import FlyoutContent from "../other/dropdown.jsx";
 
 const Navbar = () => {
   const { isMobile, isTab } = useDeviceType();
@@ -46,15 +47,15 @@ const Navbar = () => {
   return (
     <nav
       ref={navRef}
-      className={`bg-white/90 text-zinc-900 fixed z-50 backdrop-blur-xl rounded-md dark:bg-zinc-900/90 dark:text-zinc-300 transition-all duration-600 ${
-        scrollProgress > 0 && !(isMobile || isTab) ? " top-0 py-3" : "rounded-md top-3 py-1"
+      className={`bg-[#c60867] fixed z-50 transition-all duration-600 ${
+        scrollProgress > 0 && !(isMobile || isTab) ? " top-0 py-3" : " top-3 py-1"
       }`}
       style={{
         width: getContainerWidth(),
         minWidth: isMobile || isTab ? "auto" : "300px",
         left: "50%",
         transform: "translateX(-50%)",
-        borderRadius: scrollProgress > 0 && !(isMobile || isTab) ? "0" : "0.375rem",
+        borderRadius: scrollProgress > 0 && !(isMobile || isTab) ? "0" : "10rem",
       }}
     >
       <div className="w-full px-4 md:px-8">
@@ -64,23 +65,14 @@ const Navbar = () => {
             <img
               src={logo}
               alt="Logo"
-              className="w-10 h-10 transition-transform duration-300 group-hover:scale-110"
+              className="w-10 h-10 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6"
             />
           </a>
 
           {/* Desktop Nav */}
           {!isMobile && !isTab && (
             <div className="flex items-center space-x-8 dark:text-zinc-300">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="relative font-bold text-base uppercase tracking-wider group"
-                >
-                  {link.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-              ))}
+                <FlyoutContent />
             </div>
           )}
 
@@ -144,5 +136,7 @@ const Navbar = () => {
     </nav>
   );
 };
+
+
 
 export default Navbar;

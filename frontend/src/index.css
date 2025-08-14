@@ -1,2 +1,25 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
+
+body {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  background-color: #fdfdfd;
+  background-image: repeating-radial-gradient(
+    rgba(0, 0, 0, 0.03) 0,
+    rgba(0, 0, 0, 0.03) 1px,
+    transparent 1px,
+    transparent 100%
+  );
+  background-size: 3px 3px;
+}
+
+.cedarville-cursive-regular {
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.hero_text{
+    
+}
