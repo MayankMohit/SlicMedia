@@ -8,7 +8,7 @@ const Hero = () => {
 
   return (
     <div
-      className="absolute top-0 left-0 w-full h-screen bg-neutral-300 dark:bg-zinc-900"
+      className="absolute top-0 left-0 w-full h-[110vh] bg-neutral-300 dark:bg-zinc-900"
       style={{
         backgroundImage: `url(${darkMode ? bgnight : bgDay})`,
         backgroundRepeat: 'repeat',
