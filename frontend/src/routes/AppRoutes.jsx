@@ -7,7 +7,7 @@ const AppRouter = () => {
   return (
     <div className="relative">
       <MouseTrailSVG
-        points={20}
+        points={10}
         stiffness={0.9}
         damping={0.2}
         width={4}

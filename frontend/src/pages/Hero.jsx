@@ -15,14 +15,14 @@ const Hero = () => {
       }}
     >
       <div className="flex items-center justify-start h-full">
-        <div className="ml-10 mt-30">
-          <div className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-10 ml-2 select-none">  
+        <div className="ml-15 mt-30">
+          <div className="text-2xl font-bold text-gray-500 dark:text-gray-200 mb-10 ml-2 select-none">  
             B2B Service Agency
           </div>
           <p className="mt-4 text-[100px] w-[50rem] text-black font-bold font-sans leading-[6.3rem] tracking-[-4.8px] dark:text-gray-400 select-none">
             Designing <span className='cedarville-cursive-regular'>Visuals</span> that Elevate your Brand.
           </p>
-          <p className="mt-15 text-2xl w-[30rem] text-gray-800 font-bold dark:text-gray-200 ml-2 select-none leading-[1.6rem]">
+          <p className="mt-15 text-2xl w-[30rem] text-gray-500 font-bold dark:text-gray-200 ml-2 select-none leading-[1.6rem]">
             At SLIC Media, we help DTC brands scale their online presence with high-converting video creatives, content strategies, and growth packages tailored for results.
           </p>
           <p className="mt-3 text-xl text-bold text-gray-600 dark:text-gray-400 mb-10 ml-2  select-none">

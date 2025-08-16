@@ -34,7 +34,7 @@ const Navbar = () => {
 
     const initialWidth = initialWidthRef.current;
     const targetWidth = window.innerWidth;
-    return `${initialWidth + 0.62 * (targetWidth - initialWidth * 0.6) * scrollProgress}px`;
+    return `${initialWidth + (targetWidth - initialWidth) * scrollProgress}px`;
   };
 
   const navLinks = [
